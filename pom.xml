@@ -15,7 +15,7 @@
     <description>Core backend application for Photosupp project</description>
 
     <properties>
-        <java.version>14</java.version>
+        <java.version>9</java.version>
         <org.mapstruct.version>1.2.0.Final</org.mapstruct.version>
 
     </properties>
@@ -119,11 +119,13 @@
             <version>0.11.2</version>
             <scope>runtime</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>1</version>
         </dependency>
+
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
