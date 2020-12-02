@@ -136,14 +136,14 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>repository.org.springframework.security</groupId>
+            <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-            <version>5.1.4.RELEASE</version>
+            <version>5.3.5.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>repository.org.springframework.security</groupId>
+            <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>5.3.3.RELEASE</version>
+            <version>5.3.5.RELEASE</version>
         </dependency>
     </dependencies>
 
