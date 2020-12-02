@@ -78,7 +78,9 @@ public class ServiceRestServiceIntegrationTest {
 
         addressEto = new AddressEto(1L, "Wroclaw", "Wroblewskiego", "27", null, "51-627");
 
-        List<IndicatorEto> indicatorEtos = List.of(indicatorEto);
+
+        List<IndicatorEto> indicatorEtos = new ArrayList<>();
+        indicatorEtos.add(indicatorEto);
         indicatorEto = new IndicatorEto(1L,"Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 30);
         serviceEto2 = new ServiceEto(2L, "FOTOGRAFIA", "PRODUKTOWA", 1500D, "pl", indicatorEtos);
         serviceEto = new ServiceEto(1L, "Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl", indicatorEtos);
@@ -97,7 +99,8 @@ public class ServiceRestServiceIntegrationTest {
         priceIndicatorEtoList.add(priceIndicatorEto);
 
         addressTo = new AddressTo("Wroclaw", "Wroblewskiego", "27", null, "51-627");
-        List<Long> indicatorsIds = List.of(1L);
+        List<Long> indicatorsIds = new ArrayList<>();
+        indicatorsIds.add(1L);
         serviceTo = new ServiceTo("Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl", indicatorsIds);
         indicatorTo = new IndicatorTo("Podróż służbowa", "Paliwo, amortyzacja", "pl", 20, 30);
 
@@ -623,7 +626,8 @@ public class ServiceRestServiceIntegrationTest {
     @DisplayName("PUT /service/v1/service/1 - Unprocessable Entity")
     void testUpdateServiceUnprocessableEntity() throws Exception {
         //Arrange
-        List<Long> indicatorsIds = List.of(1L);
+        List<Long> indicatorsIds = new ArrayList<>();
+        indicatorsIds.add(1L);
         ServiceTo serviceTo2 = new ServiceTo("FOTOGRAFIA", "PRODUKTOWA", 500D, "pl", indicatorsIds);
 
         //Act

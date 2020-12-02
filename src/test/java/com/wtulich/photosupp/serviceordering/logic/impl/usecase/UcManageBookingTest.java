@@ -99,7 +99,8 @@ public class UcManageBookingTest {
     void setUp() {
         AddressEto addressEto = new AddressEto(1L, "Wroclaw", "Wroblewskiego", "27", null, "51-627");
         IndicatorEto indicatorEto = new IndicatorEto(1L,"Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 30);
-        List<IndicatorEto> indicatorEtos = List.of(indicatorEto);
+        List<IndicatorEto> indicatorEtos = new ArrayList<>();
+        indicatorEtos.add(indicatorEto);
 
         ServiceEto serviceEto = new ServiceEto(1L, "Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl", indicatorEtos);
 
@@ -139,7 +140,9 @@ public class UcManageBookingTest {
 
         serviceEntity = new ServiceEntity("Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl");
         indicatorEntity = new IndicatorEntity("Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 40);
-        serviceEntity.setIndicatorList(List.of(indicatorEntity));
+        List<IndicatorEntity> indicatorEntities = new ArrayList<>();
+
+        serviceEntity.setIndicatorList(indicatorEntities);
 
         PermissionEntity permissionEntity = new PermissionEntity(ApplicationPermissions.A_CRUD_SUPER, "DESC1");
         permissionEntity.setId(1L);
@@ -403,7 +406,8 @@ public class UcManageBookingTest {
         List<PriceIndicatorEto> priceIndicatorEtoList = new ArrayList<>();
         AddressEto addressEto = new AddressEto(1L, "Wroclaw", "Wroblewskiego", "27", null, "51-627");
         IndicatorEto indicatorEto = new IndicatorEto(1L,"Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 30);
-        List<IndicatorEto> indicatorEtos = List.of(indicatorEto);
+        List<IndicatorEto> indicatorEtos = new ArrayList<>();
+        indicatorEtos.add(indicatorEto);
 
         List<PermissionEto> permissionEtoList = new ArrayList<>();
         permissionEtoList.add(new PermissionEto(1L, ApplicationPermissions.A_CRUD_SUPER, "DESC1"));

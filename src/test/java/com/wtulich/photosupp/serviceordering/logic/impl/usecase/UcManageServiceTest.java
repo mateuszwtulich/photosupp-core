@@ -69,10 +69,12 @@ public class UcManageServiceTest {
         serviceEntity = new ServiceEntity("Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl");
         serviceEntity.setId(1L);
 
-        List<Long> indicatorsIds = List.of(1L);
+        List<Long> indicatorsIds = new ArrayList<>();
+        indicatorsIds.add(1L);
 
         IndicatorEto indicatorEto = new IndicatorEto(1L,"Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 30);
-        List<IndicatorEto> indicatorEtos = List.of(indicatorEto);
+        List<IndicatorEto> indicatorEtos = new ArrayList<>();
+        indicatorEtos.add(indicatorEto);
 
         serviceEto = new ServiceEto(1L, "Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl", indicatorEtos);
 

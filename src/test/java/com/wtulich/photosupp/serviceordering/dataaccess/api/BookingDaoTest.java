@@ -63,7 +63,9 @@ public class BookingDaoTest {
 
         ServiceEntity serviceEntity = new ServiceEntity("Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl");
         IndicatorEntity indicatorEntity = new IndicatorEntity("Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 40);
-        serviceEntity.setIndicatorList(List.of(indicatorEntity));
+        ArrayList<IndicatorEntity> indicatorEntities = new ArrayList<>();
+        indicatorEntities.add(indicatorEntity);
+        serviceEntity.setIndicatorList(indicatorEntities);
         serviceEntity.setId(1L);
         indicatorEntity.setId(1L);
 
@@ -113,7 +115,9 @@ public class BookingDaoTest {
         addressEntity.setId(1L);
         ServiceEntity serviceEntity = new ServiceEntity("Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl");
         IndicatorEntity indicatorEntity = new IndicatorEntity("Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 40);
-        serviceEntity.setIndicatorList(List.of(indicatorEntity));
+        ArrayList<IndicatorEntity> indicatorEntities = new ArrayList<>();
+        indicatorEntities.add(indicatorEntity);
+        serviceEntity.setIndicatorList(indicatorEntities);
         serviceEntity.setId(1L);
         indicatorEntity.setId(1L);
 

@@ -56,7 +56,8 @@ public class UcCalculateServiceTest {
     @BeforeEach
     void setUp() {
         IndicatorEto indicatorEto = new IndicatorEto(1L,"Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 30);
-        List<IndicatorEto> indicatorEtos = List.of(indicatorEto);
+        List<IndicatorEto> indicatorEtos = new ArrayList<>();
+        indicatorEtos.add(indicatorEto);
 
         ServiceEto serviceEto = new ServiceEto(1L, "Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl", indicatorEtos);
         List<PriceIndicatorEto> priceIndicatorEtoList = new ArrayList<>();
@@ -80,7 +81,9 @@ public class UcCalculateServiceTest {
 
         ServiceEntity serviceEntity = new ServiceEntity("Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl");
         IndicatorEntity indicatorEntity = new IndicatorEntity("Podroz sluzbowa", "Paliwo, amortyzacja", "pl", 20, 40);
-        serviceEntity.setIndicatorList(List.of(indicatorEntity));
+        ArrayList<IndicatorEntity> indicatorEntities = new ArrayList<>();
+        indicatorEntities.add(indicatorEntity);
+        serviceEntity.setIndicatorList(indicatorEntities);
 
     }
 

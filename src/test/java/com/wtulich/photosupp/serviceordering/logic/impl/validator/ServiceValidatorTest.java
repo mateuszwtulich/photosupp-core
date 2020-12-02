@@ -15,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.when;
@@ -36,7 +37,8 @@ public class ServiceValidatorTest {
     @BeforeEach
     void setUp() {
         serviceEntity = new ServiceEntity("Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl");
-        List<Long> indicatorsIds = List.of(1L);
+        List<Long> indicatorsIds = new ArrayList<>();
+        indicatorsIds.add(1L);
         serviceTo = new ServiceTo("Film produktowy", "Film produktow na bialym tle i odpowiednim oswietleniu", 500D, "pl", indicatorsIds);    }
 
     @Test
