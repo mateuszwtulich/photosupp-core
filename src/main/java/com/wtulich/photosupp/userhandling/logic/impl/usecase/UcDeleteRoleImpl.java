@@ -20,7 +20,7 @@ import javax.inject.Named;
 public class UcDeleteRoleImpl implements UcDeleteRole {
 
     private static final Logger LOG = LoggerFactory.getLogger(UcDeleteRoleImpl.class);
-    private static final String DELETE_ROLE_LOG = "Delete Role with id {} in database.";
+    private static final String DELETE_ROLE_LOG = "Delete  Role with id {} in database.";
 
     @Inject
     private RoleDao roleDao;
