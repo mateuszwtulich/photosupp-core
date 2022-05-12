@@ -32,9 +32,7 @@ public class UcDeleteRoleImpl implements UcDeleteRole {
     public void deleteRole(Long id) throws EntityDoesNotExistException, RoleHasAssignedUsersException {
         RoleEntity roleEntity = roleDao.findById(id).orElseThrow(() ->
                 new EntityDoesNotExistException("Role with id " + id + " does not exist."));
-
-        System.currentTimeMillis();
-        System.console();
+        
         if(userDao.findAllByRole_Id(id).isEmpty()){
             LOG.debug(DELETE_ROLE_LOG, roleEntity.getId());
 
